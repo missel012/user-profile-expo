@@ -18,8 +18,8 @@ import * as ImagePicker from 'expo-image-picker';
 export default function ProfileScreen() {
   // State Variables
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [avatar, setAvatar] = useState(null);
-  const [coverPhoto, setCoverPhoto] = useState(null);
+  const [avatar, setAvatar] = useState<string | null>(null);  // Added type definition
+  const [coverPhoto, setCoverPhoto] = useState<string | null>(null);  // Added type definition
   const [name, setName] = useState('Marisol A. Datahan');
   const [email, setEmail] = useState('datahan.marisol012@gmail.com');
   const [contactNumber, setContactNumber] = useState('+639352894109');
@@ -29,7 +29,7 @@ export default function ProfileScreen() {
   const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
 
   // Image Picker Function
-  const pickImage = async (type) => {
+  const pickImage = async (type: 'avatar' | 'cover') => {  // Added type for 'type' parameter
     try {
       // Request media library permissions if not already granted
       if (Platform.OS !== 'web') {
@@ -250,6 +250,7 @@ export default function ProfileScreen() {
     </ScrollView>
   );
 }
+
 // Stylesheet
 const styles = StyleSheet.create({
   // Main Container
