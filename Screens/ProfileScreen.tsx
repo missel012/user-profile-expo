@@ -75,6 +75,7 @@ export default function ProfileScreen() {
   };
 
   return (
+    
     <ScrollView
       style={[styles.container, isDarkMode && styles.darkContainer]}
       contentContainerStyle={{ alignItems: 'center' }}
