@@ -15,6 +15,7 @@ import {
 import { MaterialIcons } from '@expo/vector-icons';
 import * as ImagePicker from 'expo-image-picker';
 
+
 export default function ProfileScreen() {
   // State Variables
   const [isDarkMode, setIsDarkMode] = useState(false);

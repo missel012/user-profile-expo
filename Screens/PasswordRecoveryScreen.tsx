@@ -14,8 +14,6 @@ export default function PasswordRecoveryScreen({ navigation }: PasswordRecoveryS
   const [message, setMessage] = useState('');
 
   const handleSendRecoveryEmail = () => {
-    // Here you can implement the logic to send the recovery email
-    // For demonstration, we'll just set a success message
     setMessage('Recovery email sent successfully! Please check your inbox.');
   };
 
@@ -26,6 +24,10 @@ export default function PasswordRecoveryScreen({ navigation }: PasswordRecoveryS
     >
    
       <View style={styles.container}>
+      <Image
+          source={require('../assets/images/logo.png')} 
+          style={styles.logo}
+        />
         <Text style={styles.title}>Password Recovery</Text>
 
         <TextInput
@@ -72,6 +74,10 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: '#0047AB',
     marginBottom: 20,
+  },
+  logo: {
+    width: 150,
+    height: 150,
   },
   input: {
     width: '100%',

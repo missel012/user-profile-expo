@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Image } from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient'; // Make sure to install 'expo-linear-gradient'
+import { LinearGradient } from 'expo-linear-gradient'; 
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 
@@ -27,13 +27,13 @@ export default function LoginScreen({ navigation }: LoginScreenProps) {
 
   return (
     <LinearGradient
-      colors={['#A7C7E7', '#89CFF0']} // Gradient colors, adjust as needed
+      colors={['#A7C7E7', '#89CFF0']} 
       style={styles.gradientContainer}
     >
       
       <View style={styles.container}>
       <Image
-          source={require('../assets/images/logo.png')} // Adjust path if necessary
+          source={require('../assets/images/logo.png')} 
           style={styles.logo}
         />
        
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     padding: 20,
     borderRadius: 10,
-    backgroundColor: '#ffffff', // White container for contrast
+    backgroundColor: '#ffffff', 
     shadowColor: '#000',
     shadowOpacity: 0.2,
     shadowRadius: 5,
